@@ -1,0 +1,470 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  background: #FFEFBA;
+  background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);
+  background: linear-gradient(to right, #FFFFFF, #FFEFBA);
+}
+
+/* h1{
+  position: relative;
+  margin-top: -100px;
+
+} */
+.container-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 200px;
+
+}
+
+.drprofile {
+  background-color: white;
+  border: 2px solid rgb(235, 223, 167);
+  border-radius: 8px;
+  cursor: pointer;
+  width: 270px;
+  height: 360px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+}
+
+/* .btn{
+ margin-left: 90px;
+
+} */
+/* From cssbuttons.io by @xueyuantan */
+.btn {
+  margin-left: 80px;
+  margin-top: 30px;
+  width: 8em;
+  height: 2em;
+  border-radius: 10em;
+  font-size: 13px;
+  font-family: sans-serif;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 6px 6px 12px #c5c5c5,
+    -6px -6px 12px #ffffff;
+}
+
+.btn::before {
+  content: '';
+  width: 0;
+  height: 3em;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  width: 9em;
+}
+
+.profimg {
+  border-radius: 50%;
+  width: 150px;
+  border: 3px solid rgb(241, 243, 125);
+}
+
+.drinfo {
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 19px;
+}
+
+.drcode {
+  font-family: sans-serif;
+  color: #636363;
+  font-size: 15px;
+}
+
+.modalbox {
+  border: 1px solid black;
+  width: 400px;
+  height: 400px;
+  margin-top: 200px;
+  position: absolute;
+  z-index: 100;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .8);
+  border-radius: 5px;
+
+}
+
+#img-modal {
+  width: 180px;
+  margin-left: 110px;
+  margin-top: 15px;
+}
+
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.534);
+  position: fixed;
+  display: flex;
+  backdrop-filter: blur(8px);
+  backdrop-filter: brightness(70%);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.modal-btn {
+  width: 130px;
+  height: 45px;
+  position: relative;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.8em 2.5em;
+  margin-left: 40px;
+  margin-top: 100px;
+  display:flex ;
+  border-radius: 6em;
+  transition: all .2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: black;
+  background-color: rgba(240, 241, 144, 0.781);
+ }
+ 
+ .modal-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .modal-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .modal-btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+ }
+ 
+ .modal-btn::after {
+  background-color: #fff;
+ }
+ 
+ .modal-btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+ }
+ #btn-exception{
+   width: 160px;
+   height: 40px;
+   margin-top: -44px;
+   margin-left: 200px;
+ }
+ .search-container{
+  background: #fff;
+  height: 30px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin-top: -150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.8s;
+box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+            -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+  inset -4px -4px 6px 0 rgba(255,255,255,.2),
+  inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+.search-container:hover > .search-input{
+  width: 300px;
+}
+
+.search-container .search-input{
+  background: transparent;
+  border: none;
+  outline:none;
+  width: 0px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.8s;
+
+}
+
+.search-container .search-btn .fas{
+  color: #5cbdbb;
+}
+
+.search-container:hover{
+animation: hoverShake 0.15s linear 3;
+}
+.drpage{
+  width: 100%;
+  height: 1500px;
+  margin-top: -50px;
+  background: #c2e59c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.namebox{
+  font-family: sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  margin-top: 50px;
+ margin-right: 40px;
+ color: #2a0845;
+
+  
+}
+.doctorprf{
+  width: 250px;
+  border-radius: 50%;
+  margin-left: 620px;
+  margin-top: 100px;
+}
+.doctorprf:hover{
+  -moz-box-shadow: 0 0 10px #ccc;
+      -webkit-box-shadow: 0 0 10px #ccc;
+      box-shadow: 0 0 20px #ccc;
+}
+.subname{
+  font-family: sans-serif;
+  color: #ededf3;
+  margin-top: -25px;
+  font-weight: 500;
+  margin-right: 20px;
+}
+.box-container{
+  width: 75%;
+  height: 500px;
+  margin: auto;
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.box1{
+  width:30% ;
+  height: 300px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: rgb(248, 247, 187);
+  color: black;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: sans-serif;
+
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  font-style: 500;
+  font-family: sans-serif;
+  line-height: 30px;
+  transform: rotateY(180deg);
+}
+.instagram{
+  margin-left: 650px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.icon{
+  margin-right: 10px;
+  margin-bottom: -5px;
+}
+a {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+a::before,
+a::after {
+ content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+a::before {
+  background-color: #ffffff;
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+a::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 2;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: #ffffff;
+}
+
+a:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+a:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+a span {
+  display: inline-block;
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+a:hover span {
+  transform: translate3d(-200%, 0, 0);
+}
+
+
+a {
+  text-decoration: none;
+  color: #18272F;
+  font-weight: 700;
+  vertical-align: top;
+}
+.service{
+  font-weight: 700;
+  font-size: 24px;
+  margin-left: 715px;
+  margin-top: 50px;
+  display: flex;
+  text-shadow: #FC0 1px 0 10px;
+  
+}
+.about{
+  display: flex;
+  margin-left: 320px;
+  align-items: center;
+  text-align: justify;
+  width: 900px;
+  direction: rtl;
+  line-height: 25px;
+}
+.paginate-custom{
+  margin-left: 360px;
+}
+.paginate-custom ul {
+  display: flex;
+  width: 850px;
+
+  
+}
+
+.paginate-custom ul li {
+  /* width: 60px; */
+  height: 60px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.paginate-custom ul li.selected {
+  border: 2px solid red;
+  border-radius: 50%;
+  width:40px ;
+  margin-right: 10px;
+}
